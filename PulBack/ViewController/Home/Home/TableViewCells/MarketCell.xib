@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="167" id="KGk-i7-Jjw" customClass="MarketCell" customModule="PulBack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="167"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LIE-FW-9ji">
+                        <rect key="frame" x="25" y="20" width="358" height="127"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-59-qQW">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="127"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiin" translatesAutoresizingMaskIntoConstraints="NO" id="Fd3-dW-odE">
+                                        <rect key="frame" x="17" y="17" width="125" height="93"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Onh-59-qQW" secondAttribute="height" multiplier="1/0.8" id="BcD-o7-0AM"/>
+                                    <constraint firstItem="Fd3-dW-odE" firstAttribute="top" secondItem="Onh-59-qQW" secondAttribute="top" constant="17" id="EI5-MD-nwh"/>
+                                    <constraint firstItem="Fd3-dW-odE" firstAttribute="leading" secondItem="Onh-59-qQW" secondAttribute="leading" constant="17" id="aO4-yM-274"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fd3-dW-odE" secondAttribute="bottom" constant="17" id="mDW-ko-mu7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fd3-dW-odE" secondAttribute="trailing" constant="17" id="xw9-MY-JEI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="t6e-5h-40v">
+                                <rect key="frame" x="167" y="0.0" width="191" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="tiin ulgurchi savdo do'koni" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvX-XR-fJQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirzo Ulug'bek tumani Sayram 5, Tashkent Uzbekiston" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vk0-U9-IGw">
+                                        <rect key="frame" x="0.0" y="26" width="191" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vk0-U9-IGw" secondAttribute="bottom" constant="5" id="ncD-d5-w1s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LIE-FW-9ji" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="C6e-2K-ZKr"/>
+                    <constraint firstAttribute="trailing" secondItem="LIE-FW-9ji" secondAttribute="trailing" constant="25" id="JBx-C8-rDm"/>
+                    <constraint firstItem="LIE-FW-9ji" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="KHn-o6-3XO"/>
+                    <constraint firstAttribute="bottom" secondItem="LIE-FW-9ji" secondAttribute="bottom" constant="20" id="Kki-jJ-RO1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="140.57971014492756" y="104.12946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tiin" width="312" height="206"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

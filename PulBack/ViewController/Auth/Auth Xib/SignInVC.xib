@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInVC" customModule="PulBack" customModuleProvider="target">
+            <connections>
+                <outlet property="helpLabel" destination="CqT-JV-y2i" id="D7R-yO-5CQ"/>
+                <outlet property="numberTF" destination="lgb-lw-OrC" id="r1M-eT-zAw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="AJI-gj-p9H">
+                    <rect key="frame" x="41.5" y="229" width="331" height="438"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pulback" translatesAutoresizingMaskIntoConstraints="NO" id="Riq-fF-f2x">
+                            <rect key="frame" x="109" y="0.0" width="113" height="113"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Riq-fF-f2x" secondAttribute="height" id="BL1-pQ-ZE2"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-nU-bTi">
+                            <rect key="frame" x="21.5" y="182" width="288.5" height="256"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="obV-rl-izF">
+                                    <rect key="frame" x="0.0" y="0.0" width="288.5" height="256"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="jTU-7q-rfG">
+                                            <rect key="frame" x="0.0" y="0.0" width="288.5" height="154"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgb-lw-OrC" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288.5" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="AjJ-uG-jYo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="33"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOr-a7-SyZ">
+                                                    <rect key="frame" x="0.0" y="88" width="288.5" height="66"/>
+                                                    <color key="backgroundColor" red="0.92159456009999996" green="0.27503430839999998" blue="0.22379681470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="6KA-gi-1vV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <state key="normal" title="PulBack ga kirish">
+                                                        <color key="titleColor" red="0.99991267920000004" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="33"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="signInButton:" destination="-1" eventType="touchUpInside" id="50m-EO-hgY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agar PulBackdan avval foydalanmagan bo'lsangiz mana bunadan boshlang" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-JV-y2i">
+                                            <rect key="frame" x="20" y="179" width="248.5" height="77"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="77" id="FUO-Mu-Sfr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jTU-7q-rfG" secondAttribute="trailing" id="GPU-BU-9xc"/>
+                                        <constraint firstAttribute="trailing" secondItem="CqT-JV-y2i" secondAttribute="trailing" constant="20" id="cxW-nP-5D9"/>
+                                        <constraint firstItem="CqT-JV-y2i" firstAttribute="leading" secondItem="obV-rl-izF" secondAttribute="leading" constant="20" id="vk6-sj-Yzz"/>
+                                        <constraint firstItem="jTU-7q-rfG" firstAttribute="leading" secondItem="obV-rl-izF" secondAttribute="leading" id="wVX-tu-k1h"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Riq-fF-f2x" firstAttribute="width" secondItem="AJI-gj-p9H" secondAttribute="width" multiplier="0.34" id="jWi-YU-buP"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.99991267920000004" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AJI-gj-p9H" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="SB1-h4-FbT"/>
+                <constraint firstItem="AJI-gj-p9H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g1t-vK-fnm"/>
+                <constraint firstItem="AJI-gj-p9H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pRL-nA-rrQ"/>
+            </constraints>
+            <point key="canvasLocation" x="37.681159420289859" y="96.428571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pulback" width="784" height="744"/>
+    </resources>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerVC" customModule="PulBack" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="5Ef-mF-74x">
+                    <rect key="frame" x="0.0" y="283" width="414" height="330"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRg-aa-pku">
+                    <rect key="frame" x="41" y="90" width="30" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="BMu-LX-0MS"/>
+                        <constraint firstAttribute="height" constant="34" id="dzf-4N-Nzd"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="dimis:" destination="-1" eventType="touchUpInside" id="sTg-5g-Yxe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5Ef-mF-74x" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="14G-2y-qpR"/>
+                <constraint firstItem="5Ef-mF-74x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OlZ-Jg-ahu"/>
+                <constraint firstItem="5Ef-mF-74x" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gos-ec-J3Q"/>
+                <constraint firstItem="gRg-aa-pku" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="46" id="pFQ-Bk-iTf"/>
+                <constraint firstItem="gRg-aa-pku" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="41" id="qFC-2i-jOk"/>
+                <constraint firstItem="5Ef-mF-74x" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.368304" id="xte-0J-Q3r"/>
+            </constraints>
+            <point key="canvasLocation" x="86.956521739130437" y="30.803571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="512" height="512"/>
+        <image name="scan" width="1080" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

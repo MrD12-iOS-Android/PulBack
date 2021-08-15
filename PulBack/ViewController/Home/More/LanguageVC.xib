@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageVC" customModule="PulBack" customModuleProvider="target">
+            <connections>
+                <outlet property="addLang" destination="CtO-0z-YK9" id="MYP-kk-Ayq"/>
+                <outlet property="backView" destination="s2I-Iz-xbB" id="lDd-wg-ocw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="langs" destination="MSw-oU-rds" collectionClass="NSMutableArray" id="p8p-vh-ECW"/>
+                <outletCollection property="langs" destination="FKc-hg-YDY" collectionClass="NSMutableArray" id="xVV-cg-daO"/>
+                <outletCollection property="langs" destination="XbN-3m-yxo" collectionClass="NSMutableArray" id="FZr-bA-QbP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2I-Iz-xbB">
+                    <rect key="frame" x="0.0" y="332" width="414" height="564"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-fR-XZW">
+                            <rect key="frame" x="270" y="20" width="115" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Bekor qilish"/>
+                            <connections>
+                                <action selector="dismis:" destination="-1" eventType="touchUpInside" id="YZL-AX-7DN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtO-0z-YK9">
+                            <rect key="frame" x="33" y="471" width="348" height="60"/>
+                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="9Cf-8q-zEp"/>
+                            </constraints>
+                            <state key="normal" title="Tilni qo'llash">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="addLang:" destination="-1" eventType="touchUpInside" id="Rgq-HK-MvH"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aHF-x6-K3A">
+                            <rect key="frame" x="33" y="228" width="348" height="210"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgc-9E-L3M">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="56.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVR-DD-4bf">
+                                            <rect key="frame" x="22" y="10" width="304" height="36.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uzbekistan" translatesAutoresizingMaskIntoConstraints="NO" id="T5F-u1-zph">
+                                                    <rect key="frame" x="0.0" y="0.0" width="36.5" height="36.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="T5F-u1-zph" secondAttribute="height" id="6gj-fF-848"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSw-oU-rds">
+                                                    <rect key="frame" x="36.5" y="0.0" width="267.5" height="36.5"/>
+                                                    <state key="normal" title="Uzbek"/>
+                                                    <connections>
+                                                        <action selector="uzbek:" destination="-1" eventType="touchUpInside" id="3C9-zY-yR9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    <constraints>
+                                        <constraint firstItem="UVR-DD-4bf" firstAttribute="leading" secondItem="Qgc-9E-L3M" secondAttribute="leading" constant="22" id="7zc-xn-rHH"/>
+                                        <constraint firstAttribute="trailing" secondItem="UVR-DD-4bf" secondAttribute="trailing" constant="22" id="LXL-f5-sHc"/>
+                                        <constraint firstAttribute="bottom" secondItem="UVR-DD-4bf" secondAttribute="bottom" constant="10" id="Lts-n4-F2J"/>
+                                        <constraint firstItem="UVR-DD-4bf" firstAttribute="top" secondItem="Qgc-9E-L3M" secondAttribute="top" constant="10" id="wVa-cc-0vy"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="va7-PD-gk6">
+                                    <rect key="frame" x="0.0" y="76.5" width="348" height="57"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFC-ta-hdq">
+                                            <rect key="frame" x="22" y="10" width="304" height="37"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="russia" translatesAutoresizingMaskIntoConstraints="NO" id="aId-Vd-4al">
+                                                    <rect key="frame" x="0.0" y="0.0" width="36.5" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aId-Vd-4al" secondAttribute="height" id="SV2-vY-72F"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKc-hg-YDY">
+                                                    <rect key="frame" x="36.5" y="0.0" width="267.5" height="37"/>
+                                                    <state key="normal" title="Russia"/>
+                                                    <connections>
+                                                        <action selector="uzbek:" destination="-1" eventType="touchUpInside" id="5NJ-AT-b0h"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="iFC-ta-hdq" secondAttribute="bottom" constant="10" id="6j8-8k-O6r"/>
+                                        <constraint firstItem="iFC-ta-hdq" firstAttribute="top" secondItem="va7-PD-gk6" secondAttribute="top" constant="10" id="gTb-V9-Lug"/>
+                                        <constraint firstItem="iFC-ta-hdq" firstAttribute="leading" secondItem="va7-PD-gk6" secondAttribute="leading" constant="22" id="mNF-wj-bXE"/>
+                                        <constraint firstAttribute="trailing" secondItem="iFC-ta-hdq" secondAttribute="trailing" constant="22" id="yT8-5L-U1o"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBE-Fw-qZZ">
+                                    <rect key="frame" x="0.0" y="153.5" width="348" height="56.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V53-ze-7SZ">
+                                            <rect key="frame" x="22" y="10" width="304" height="36.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="united-kingdom" translatesAutoresizingMaskIntoConstraints="NO" id="1NL-h9-NG8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="36.5" height="36.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="1NL-h9-NG8" secondAttribute="height" id="atx-rx-ujr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbN-3m-yxo">
+                                                    <rect key="frame" x="36.5" y="0.0" width="267.5" height="36.5"/>
+                                                    <state key="normal" title="English"/>
+                                                    <connections>
+                                                        <action selector="uzbek:" destination="-1" eventType="touchUpInside" id="12s-3h-u3w"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    <constraints>
+                                        <constraint firstItem="V53-ze-7SZ" firstAttribute="leading" secondItem="mBE-Fw-qZZ" secondAttribute="leading" constant="22" id="2RP-We-WWy"/>
+                                        <constraint firstItem="V53-ze-7SZ" firstAttribute="top" secondItem="mBE-Fw-qZZ" secondAttribute="top" constant="10" id="9nW-mr-aAx"/>
+                                        <constraint firstAttribute="bottom" secondItem="V53-ze-7SZ" secondAttribute="bottom" constant="10" id="VQw-fQ-HAi"/>
+                                        <constraint firstAttribute="trailing" secondItem="V53-ze-7SZ" secondAttribute="trailing" constant="22" id="s4t-St-B1Z"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="210" id="F5N-g7-a22"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tilni tanlang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CK-hL-bND">
+                            <rect key="frame" x="33" y="62" width="263" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ilovadan foydalanmoqchi bo'lgan tilni tanlang" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-Y2-eib">
+                            <rect key="frame" x="33" y="105" width="348" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="564" id="AgT-1u-g44"/>
+                        <constraint firstItem="CtO-0z-YK9" firstAttribute="leading" secondItem="s2I-Iz-xbB" secondAttribute="leading" constant="33" id="Jcl-cr-Afs"/>
+                        <constraint firstItem="CtO-0z-YK9" firstAttribute="top" secondItem="aHF-x6-K3A" secondAttribute="bottom" constant="33" id="Lng-ra-azW"/>
+                        <constraint firstAttribute="trailing" secondItem="CtO-0z-YK9" secondAttribute="trailing" constant="33" id="QxT-T0-mrb"/>
+                        <constraint firstAttribute="bottom" secondItem="CtO-0z-YK9" secondAttribute="bottom" constant="33" id="kaZ-7r-CLO"/>
+                        <constraint firstItem="aHF-x6-K3A" firstAttribute="leading" secondItem="s2I-Iz-xbB" secondAttribute="leading" constant="33" id="mJl-Ss-Sqz"/>
+                        <constraint firstAttribute="trailing" secondItem="aHF-x6-K3A" secondAttribute="trailing" constant="33" id="t5c-QU-yMl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.62905752422004346" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s2I-Iz-xbB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="93w-VY-i85"/>
+                <constraint firstAttribute="bottom" secondItem="s2I-Iz-xbB" secondAttribute="bottom" id="C5j-Yh-Nqw"/>
+                <constraint firstItem="s2I-Iz-xbB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XID-72-Drt"/>
+            </constraints>
+            <point key="canvasLocation" x="86.956521739130437" y="30.803571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="russia" width="128" height="128"/>
+        <image name="united-kingdom" width="128" height="128"/>
+        <image name="uzbekistan" width="128" height="128"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
